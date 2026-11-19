@@ -1,0 +1,78 @@
+/* Leonida Platinum Path — original neon styling, system fonts only. */
+:root {
+  --bg: #070d1f;
+  --panel: #0e1830;
+  --panel-2: #12203f;
+  --ink: #eef3ff;
+  --muted: #9fb2d8;
+  --magenta: #ff3d8a;
+  --cyan: #2ee6d6;
+  --amber: #ffb340;
+  --platinum: #bfe9ff;
+  --gold: #ffd34d;
+  --silver: #cfd8e6;
+  --bronze: #e09a63;
+  --danger: #ff5d5d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #070d1f 0%, #0a1430 55%, #160f2e 100%);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.45;
+}
+.hero {
+  display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; justify-content: space-between;
+  padding: 28px 24px 18px;
+  border-bottom: 3px solid var(--magenta);
+  background: radial-gradient(600px 220px at 15% 0%, rgba(255,61,138,.25), transparent 70%),
+              radial-gradient(600px 220px at 85% 0%, rgba(46,230,214,.18), transparent 70%);
+}
+.kicker { color: var(--cyan); letter-spacing: .12em; text-transform: uppercase; font-size: 12px; margin: 0 0 6px; }
+h1 { margin: 0; font-size: 40px; line-height: 1.05; text-shadow: 0 0 18px rgba(255,61,138,.45); }
+.summary { color: var(--muted); max-width: 640px; margin: 10px 0 0; }
+.progress-card { background: var(--panel); border: 1px solid var(--cyan); border-radius: 12px; padding: 14px 18px; min-width: 300px; }
+#progress-label { margin: 0 0 8px; font-size: 20px; font-weight: 700; }
+.bar { height: 14px; background: #1b2a4d; border-radius: 7px; overflow: hidden; }
+#progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--magenta), var(--amber), var(--cyan)); transition: width .3s ease; }
+.grade-counts { color: var(--muted); margin: 8px 0 0; font-size: 13px; }
+.panel { background: var(--panel); border: 1px solid #22355f; border-radius: 12px; margin: 16px 24px; padding: 16px 18px; }
+h2 { margin: 0 0 6px; color: var(--cyan); }
+.hint { color: var(--muted); font-size: 13px; }
+.phase { background: var(--panel-2); border-left: 4px solid var(--magenta); border-radius: 8px; padding: 10px 14px; margin: 10px 0; }
+.phase h3 { margin: 0 0 4px; }
+.phase .goal { margin: 0 0 6px; }
+.phase .covers { color: var(--muted); font-size: 13px; margin: 0 0 6px; }
+.alert { color: #ffd7d7; background: rgba(255,93,93,.14); border: 1px solid var(--danger); border-radius: 6px; padding: 6px 10px; font-size: 13px; margin: 6px 0 0; }
+.controls .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 8px 0; }
+.controls .grow { flex: 1 1 260px; display: flex; gap: 8px; align-items: center; }
+input[type="search"] { flex: 1; padding: 8px 10px; border-radius: 8px; border: 1px solid #33507f; background: #0a1428; color: var(--ink); }
+button, .import-btn { background: #182a52; color: var(--ink); border: 1px solid var(--cyan); border-radius: 8px; padding: 7px 12px; cursor: pointer; font-size: 14px; }
+button:hover, .import-btn:hover { background: #1f3670; }
+.import-btn input { display: none; }
+.chip { border-color: #33507f; }
+.chip.active { background: var(--magenta); border-color: var(--magenta); color: #fff; font-weight: 700; }
+.layout { display: grid; grid-template-columns: minmax(420px, 1.2fr) minmax(320px, 1fr); gap: 0; align-items: start; }
+.checklist ul { list-style: none; margin: 0; padding: 0; }
+.trophy { display: flex; gap: 10px; align-items: flex-start; padding: 9px 8px; border-bottom: 1px solid #1d2f57; cursor: pointer; border-radius: 6px; }
+.trophy:hover { background: #14234a; }
+.trophy.selected { background: #1a2c5c; outline: 1px solid var(--cyan); }
+.trophy input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--magenta); }
+.trophy .name { font-weight: 700; }
+.trophy .desc { color: var(--muted); font-size: 13px; display: block; }
+.trophy.earned .name { color: var(--cyan); }
+.badge { font-size: 11px; font-weight: 700; border-radius: 999px; padding: 2px 8px; white-space: nowrap; }
+.badge.Platinum { background: var(--platinum); color: #0a2436; }
+.badge.Gold { background: var(--gold); color: #3a2a00; }
+.badge.Silver { background: var(--silver); color: #22304a; }
+.badge.Bronze { background: var(--bronze); color: #3a1e05; }
+.badge.missable { background: var(--danger); color: #fff; }
+.badge.kind { background: #22355f; color: var(--muted); }
+.detail { position: sticky; top: 12px; }
+.detail h3 { margin: 0 0 4px; font-size: 22px; }
+.detail .official { color: var(--muted); font-style: italic; }
+.detail .guide { margin: 10px 0; }
+.detail .sources { color: var(--cyan); font-size: 13px; border-top: 1px solid #22355f; padding-top: 8px; }
+footer { color: var(--muted); font-size: 13px; padding: 4px 24px 28px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .detail { position: static; } }

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Path — GTA VI Trophy Guide and Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide and tracker</p>
+    <h1>Leonida Platinum Path</h1>
+    <p class="summary">Platinum difficulty: <strong>Moderate–Hard (6/10)</strong> · Estimated time: <strong>90–130 hours</strong> · 55 trophies: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze · 9 missable — heed the warnings in Phase 1.</p>
+  </div>
+  <div class="progress-card">
+    <p id="progress-label">0 of 55 earned</p>
+    <div class="bar"><div id="progress-fill"></div></div>
+    <p id="grade-counts" class="grade-counts">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</p>
+  </div>
+</header>
+
+<section class="panel" id="roadmap-panel">
+  <h2>Roadmap to the Platinum</h2>
+  <p class="hint">Four phases, in order. Each phase lists the trophies it covers and its missable alerts — read the alerts before you start the phase, not after.</p>
+  <div id="roadmap"></div>
+</section>
+
+<section class="panel controls" id="filters">
+  <div class="row">
+    <label class="grow">Search <input id="search" type="search" placeholder="Trophy name, description or guide…"></label>
+    <label>Spoiler shield <input id="spoiler" type="checkbox"> <span class="hint">hide unearned story trophies as ???</span></label>
+    <button id="export" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="import" type="file" accept="application/json"></label>
+  </div>
+  <div class="row" id="kind-filters" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="chip active">All kinds</button>
+    <button type="button" data-kind="story" class="chip">Story</button>
+    <button type="button" data-kind="missable" class="chip">Missable</button>
+    <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+    <button type="button" data-kind="activities" class="chip">Activities</button>
+    <button type="button" data-kind="online" class="chip">Online</button>
+  </div>
+  <div class="row" id="grade-filters" role="group" aria-label="Filter by grade">
+    <button type="button" data-grade="all" class="chip active">All grades</button>
+    <button type="button" data-grade="Platinum" class="chip">Platinum</button>
+    <button type="button" data-grade="Gold" class="chip">Gold</button>
+    <button type="button" data-grade="Silver" class="chip">Silver</button>
+    <button type="button" data-grade="Bronze" class="chip">Bronze</button>
+  </div>
+  <p id="showing" class="hint">Showing 55 trophies</p>
+</section>
+
+<main class="layout">
+  <section class="panel checklist" aria-label="Trophy checklist">
+    <ul id="trophy-list"></ul>
+  </section>
+  <aside class="panel detail" id="detail" aria-label="Trophy detail">
+    <p class="hint">Select a trophy to read its official description, the guide and its sources.</p>
+  </aside>
+</main>
+
+<footer>
+  <p>Guides written for this entry. Sources are named beside each trophy: the Official PlayStation trophy list, Exophase — Grand Theft Auto VI PSN trophy list, and PSNProfiles — GTA VI Trophy Guide. Progress is stored only in your browser (localStorage) and can be exported and imported above. No network is used.</p>
+</footer>
+
+<script src="tracker.js"></script>
+<script src="roadmap.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
